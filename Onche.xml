@@ -1,0 +1,244 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\..\FrameXML\UI.xsd">
+	<Script file="Onche.lua"/>
+	<Frame name="StickersFrame" enableMouse="true" toplevel="true" parent="UIParent" hidden="true">
+		<Size>
+			<AbsDimension x="384" y="512"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="0" y="-104"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<HitRectInsets>
+			<AbsInset left="0" right="30" top="0" bottom="45"/>
+		</HitRectInsets>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="StickersFramePortrait" file="Interface\AddOns\Onche\onche.tga">
+					<Size>
+						<AbsDimension x="60" y="60"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="7" y="-6"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="BORDER">
+				<Texture name="StickersFrameTopLeft" file="Interface\PaperDollInfoFrame\UI-Character-General-TopLeft">
+					<Size>
+						<AbsDimension x="256" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="2" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture name="StickersFrameTopRight" file="Interface\PaperDollInfoFrame\UI-Character-General-TopRight">
+					<Size>
+						<AbsDimension x="128" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture name="StickersFrameBottomLeft" file="Interface\PaperDollInfoFrame\UI-Character-General-BottomLeft">
+					<Size>
+						<AbsDimension x="256" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="2" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture name="StickersFrameBottomRight" file="Interface\PaperDollInfoFrame\UI-Character-General-BottomRight">
+					<Size>
+						<AbsDimension x="128" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="StickersFrameTitleText" inherits="GameFontNormal" text="Stickers">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-18"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="StickersFrameCloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="TOPRIGHT">
+						<Offset x="-44" y="-25"/>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<ScrollFrame name="StickersFrameScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="296" y="354"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-65" y="-77"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOM" relativeTo="StickersFramePointsBar" relativePoint="TOP">
+						<Offset x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BORDER">
+						<Texture name="StickersFrameBackgroundTopLeft">
+							<Size x="256" y="256"/>
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="RIGHT">
+									<Offset x="-40" y="0"/>
+								</Anchor>
+								<Anchor point="BOTTOM">
+									<Offset x="0" y="76"/>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.0" right="1.0" top="0.0" bottom="1.0"/>
+						</Texture>
+						<Texture name="StickersFrameBackgroundTopRight">
+							<Size x="44" y="256"/>
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+								<Anchor point="BOTTOMLEFT" relativeTo="StickersFrameBackgroundTopLeft" relativePoint="BOTTOMRIGHT"/>
+							</Anchors>
+							<TexCoords left="0.0" right="0.6875" top="0.0" bottom="1.0"/>
+						</Texture>
+						<Texture name="StickersFrameBackgroundBottomLeft">
+							<Size x="256" y="75"/>
+							<Anchors>
+								<Anchor point="BOTTOMLEFT"/>
+								<Anchor point="TOPRIGHT" relativeTo="StickersFrameBackgroundTopLeft" relativePoint="BOTTOMRIGHT"/>
+							</Anchors>
+							<TexCoords left="0.0" right="1.0" top="0.0" bottom="0.5859375"/>
+						</Texture>
+						<Texture name="StickersFrameBackgroundBottomRight">
+							<Size x="44" y="75"/>
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT"/>
+								<Anchor point="TOPLEFT" relativeTo="StickersFrameBackgroundTopLeft" relativePoint="BOTTOMRIGHT"/>
+							</Anchors>
+							<TexCoords left="0.0" right="0.6875" top="0.0" bottom="0.5859375"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<Texture name="StickersFrameScrollFrameBackgroundTop" file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+							<Size>
+								<AbsDimension x="31" y="256"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+									<Offset>
+										<AbsDimension x="-2" y="5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.484375" top="0" bottom="1.0"/>
+						</Texture>
+						<Texture name="StickersFrameScrollFrameBackgroundBottom" file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+							<Size>
+								<AbsDimension x="31" y="106"/>
+							</Size>
+							<Anchors>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+									<Offset>
+										<AbsDimension x="-2" y="-2"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.515625" right="1.0" top="0" bottom="0.4140625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Frame name="StickersFrameActiveTalentGroupFrame" hidden="true">
+						<Size x="0" y="0"/>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="-2" y="4"/>
+							</Anchor>
+							<Anchor point="BOTTOMRIGHT">
+								<Offset x="2" y="-4"/>
+							</Anchor>
+						</Anchors>
+						<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+							<BorderColor r="1.0" g="0.82" b="0.0" a="1.0"/>
+							<Color r="0.0" g="0.0" b="0.0" a="0.0"/>
+							<EdgeSize>
+								<AbsValue val="16"/>
+							</EdgeSize>
+							<TileSize>
+								<AbsValue val="16"/>
+							</TileSize>
+						</Backdrop>
+					</Frame>
+				</Frames>
+				<ScrollChild>
+					<Frame name="StickersFrameScrollChildFrame">
+						<Size>
+							<AbsDimension x="320" y="50"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT"/>
+						</Anchors>
+					</Frame>
+				</ScrollChild>
+			</ScrollFrame>
+			<Frame name="StickersFrameScrollButtonOverlay" parent="StickersFrameScrollFrameScrollBarScrollDownButton" hidden="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<Texture file="Interface\Buttons\UI-ScrollBar-Button-Overlay" setAllPoints="true" alphaMode="ADD"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<!-- <OnShow function="StickersFrame_OnShow"/> -->
+			<!-- <OnHide function="StickersFrame_OnHide"/> -->
+			<OnLoad function="StickersFrame_OnLoad"/>
+			<!-- <OnEvent function="StickersFrame_OnEvent"/> -->
+		</Scripts>
+	</Frame>
+</Ui>
