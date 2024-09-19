@@ -1,4 +1,4 @@
-local version = "0.1"
+local version = "0.2"
 local CHAT_STICKER_SIZE = 38
 local BUBBLE_STICKER_SIZE = 32
 
